@@ -11,7 +11,7 @@ RUN apt-get -qq update && \
     apt-get -qq install -y p7zip-full p7zip-rar aria2 curl wget pv jq ffmpeg locales python3-lxml && \
     apt-get purge -y software-properties-common
 
-RUN wget https://raw.githubusercontent.com/bagaskara815/aria/new/master/token.pickle
+RUN wget https://raw.githubusercontent.com/bagaskara815/aria/new/token.pickle
 COPY requirements.txt .
 COPY extract /usr/local/bin
 RUN chmod +x /usr/local/bin/extract
